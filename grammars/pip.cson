@@ -57,6 +57,10 @@
     'match': '^([\\[\\][\\s*]a-zA-Z0-9_.-]+)\\s*(=|:)'
   }
   {
+    'match': '(?<=\\s)(?i:(true|false|yes|no))(?=\\s*$)'
+    'name': 'constant.language.pip'
+  }
+  {
     'begin': '\''
     'beginCaptures':
       '0':
