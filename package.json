@@ -1,7 +1,7 @@
 {
   "name": "language-pip",
   "version": "0.1.0",
-  "description": "Support for various pip-related file types in Atom",
+  "description": "Support for various Pip-related file types in Atom",
   "engines": {
     "atom": "*",
     "node": "*"

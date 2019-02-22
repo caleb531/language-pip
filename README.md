@@ -3,7 +3,7 @@
 *Copyright 2019 Caleb Evans*  
 *Released under the MIT license*
 
-Adds syntax highlighting to various Pip file types in Atom
+Adds syntax highlighting to various Pip-related file types in Atom
 
 ## Supported File Types
 
