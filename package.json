@@ -1,0 +1,11 @@
+{
+  "name": "language-pip",
+  "version": "0.1.0",
+  "description": "Support for various pip-related file types in Atom",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/caleb531/language-pip"
+}
