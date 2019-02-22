@@ -61,6 +61,10 @@
     'name': 'constant.language.boolean.pip'
   }
   {
+    'match': '[-+]?[0-9]+(?=\\s*$)'
+    'name': 'constant.numeric.integer.pip'
+  }
+  {
     'begin': '\''
     'beginCaptures':
       '0':
