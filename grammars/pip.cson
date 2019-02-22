@@ -58,7 +58,7 @@
   }
   {
     'match': '(?<=\\s)(?i:(true|false|yes|no))(?=\\s*$)'
-    'name': 'constant.language.pip'
+    'name': 'constant.language.boolean.pip'
   }
   {
     'begin': '\''
