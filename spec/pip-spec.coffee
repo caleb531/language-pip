@@ -47,6 +47,14 @@ describe "SS grammar", ->
     {tokens} = grammar.tokenizeLine 'timeout = 60'
     expect(tokens[4]).toEqual value: '60', scopes: ['text.pip', 'constant.numeric.integer.pip']
 
+  it "tokenizes floats", ->
+    {tokens} = grammar.tokenizeLine 'timeout = 0.5'
+    expect(tokens[4]).toEqual value: '0.5', scopes: ['text.pip', 'constant.numeric.float.pip']
+
+  it "tokenizes floats without digits after decimal", ->
+    {tokens} = grammar.tokenizeLine 'timeout = 60.'
+    expect(tokens[4]).toEqual value: '60.', scopes: ['text.pip', 'constant.numeric.float.pip']
+
   it "tokenizes boolean true", ->
     {tokens} = grammar.tokenizeLine 'yes:true'
     expect(tokens[2]).toEqual value: 'true', scopes: ['text.pip', 'constant.language.boolean.pip']
