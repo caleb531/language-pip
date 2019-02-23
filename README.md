@@ -5,6 +5,9 @@
 
 Adds syntax highlighting to various Pip-related file types in Atom
 
+Contributions are greatly appreciated. Please fork this repository and open a
+pull request to add snippets, make grammar tweaks, etc.
+
 ## Installation
 
 You can install language-pip through the Atom Settings screen, or via the
