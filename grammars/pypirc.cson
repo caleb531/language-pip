@@ -1,0 +1,90 @@
+'name': 'pypirc'
+'scopeName': 'text.pip.pypirc'
+'fileTypes': [
+  'pypirc'
+]
+'patterns': [
+  {
+    'begin': '(^[\\s]+)?(?=#)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.pip'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '#'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.pip'
+        'end': '\\n'
+        'name': 'comment.line.number-sign.pip'
+      }
+    ]
+  }
+  {
+    'begin': '(^[\\s]+)?(?=;)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.pip'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': ';'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.pip'
+        'end': '\\n'
+        'name': 'comment.line.semicolon.pip'
+      }
+    ]
+  }
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.entity.pip'
+      '3':
+        'name': 'punctuation.definition.entity.pip'
+    'match': '^(\\[)(.*?)(\\])'
+    'name': 'entity.name.section.group-title.pip'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'keyword.other.definition.pip'
+      '2':
+        'name': 'punctuation.separator.key-value.pip'
+    'match': '^([a-zA-Z0-9_-]+)\\s*(=|:)'
+  }
+  {
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.pip'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.pip'
+    'name': 'string.quoted.single.pip'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.pip'
+      }
+    ]
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.pip'
+    'end': '[!^\\"](?!.*\")'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.pip'
+    'name': 'string.quoted.double.pip'
+  }
+  {
+    'match': '[^\\s"\'\\n](?!\\s*#(?!{))([^#\\n]|((?<!\\s)#))*'
+    'name': 'string.unquoted.pip'
+  }
+]

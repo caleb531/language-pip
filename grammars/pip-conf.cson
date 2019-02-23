@@ -1,7 +1,6 @@
-'name': 'Pip'
-'scopeName': 'text.pip'
+'name': 'Pip configuration'
+'scopeName': 'text.pip.pip-conf'
 'fileTypes': [
-  'pypirc',
   'pip.conf'
 ]
 'patterns': [
@@ -69,35 +68,7 @@
     'name': 'constant.numeric.float.pip'
   }
   {
-    'begin': '\''
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.pip'
-    'end': '\''
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.pip'
-    'name': 'string.quoted.single.pip'
-    'patterns': [
-      {
-        'match': '\\\\.'
-        'name': 'constant.character.escape.pip'
-      }
-    ]
-  }
-  {
-    'begin': '"'
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.pip'
-    'end': '[!^\\"](?!.*\")'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.pip'
-    'name': 'string.quoted.double.pip'
-  }
-  {
-    'match': '[^\\s"\'\\n](?!\\s*#(?!{))([^\\n]|((?<!\\s)#))*'
+    'match': '[^\\s\\n](?!\\s*#(?!{))([^\\n]|((?<!\\s)#))*'
     'name': 'string.unquoted.pip'
   }
 ]
