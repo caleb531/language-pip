@@ -3,6 +3,8 @@
 *Copyright 2019 Caleb Evans*  
 *Released under the MIT license*
 
+[![Build Status](https://travis-ci.org/caleb531/language-pip.svg?branch=master)](https://travis-ci.org/caleb531/language-pip)
+
 Adds syntax highlighting to various Pip-related file types in Atom
 
 Contributions are greatly appreciated. Please fork this repository and open a
