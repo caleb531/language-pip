@@ -48,12 +48,12 @@ describe "SS grammar", ->
     expect(tokens[4]).toEqual value: '60', scopes: ['text.pip', 'constant.numeric.integer.pip']
 
   it "tokenizes boolean true", ->
-    {tokens} = grammar.tokenizeLine 'yes = true'
-    expect(tokens[4]).toEqual value: 'true', scopes: ['text.pip', 'constant.language.boolean.pip']
+    {tokens} = grammar.tokenizeLine 'yes:true'
+    expect(tokens[2]).toEqual value: 'true', scopes: ['text.pip', 'constant.language.boolean.pip']
 
   it "tokenizes boolean yes", ->
-    {tokens} = grammar.tokenizeLine 'yes = false'
-    expect(tokens[4]).toEqual value: 'false', scopes: ['text.pip', 'constant.language.boolean.pip']
+    {tokens} = grammar.tokenizeLine 'yes:false'
+    expect(tokens[2]).toEqual value: 'false', scopes: ['text.pip', 'constant.language.boolean.pip']
 
   it "tokenizes boolean yes", ->
     {tokens} = grammar.tokenizeLine 'disable_pip_version_check = yes'
