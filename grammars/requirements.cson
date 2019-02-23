@@ -5,6 +5,23 @@
 ]
 'patterns': [
   {
+    'begin': '^([\\s]+)?(?=#)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.pip'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '#'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.pip'
+        'end': '\\n'
+        'name': 'comment.line.number-sign.pip'
+      }
+    ]
+  }
+  {
     'match': '([1-9]\\d*!)?(0|[1-9]\\d*)(\\.(0|[1-9]\\d*))*((a|b|rc)(0|[1-9]\\d*))?(\\.post(0|[1-9]\\d*))?(\\.dev(0|[1-9]\\d*))?(?=\\s*$)'
     'name': 'constant.numeric.version.pip'
   }
