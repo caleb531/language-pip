@@ -2,6 +2,7 @@
 'scopeName': 'text.pip.pip-conf'
 'fileTypes': [
   'pip.conf'
+  'setup.cfg'
 ]
 'patterns': [
   {
