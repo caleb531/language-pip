@@ -74,3 +74,7 @@ describe "SS grammar", ->
   it "tokenizes string values", ->
     {tokens} = grammar.tokenizeLine 'format = freeze'
     expect(tokens[4]).toEqual value: 'freeze', scopes: ['text.pip', 'string.unquoted.pip']
+
+  it "tokenizes comments following setting values as strings", ->
+    {tokens} = grammar.tokenizeLine 'timeout = 60 # foo'
+    expect(tokens[4]).toEqual value: '60 # foo', scopes: ['text.pip', 'string.unquoted.pip']
