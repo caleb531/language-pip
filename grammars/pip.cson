@@ -54,7 +54,7 @@
         'name': 'keyword.other.definition.pip'
       '2':
         'name': 'punctuation.separator.key-value.pip'
-    'match': '^([\\[\\][\\s*]a-zA-Z0-9_.-]+)\\s*(=|:)'
+    'match': '^([a-zA-Z0-9_-]+)\\s*(=|:)'
   }
   {
     'match': '(?<=\\s)(?i:(true|false|yes|no))(?=\\s*$)'
