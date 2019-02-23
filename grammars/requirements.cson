@@ -1,0 +1,19 @@
+'name': 'Pip requirements'
+'scopeName': 'text.pip.requirements'
+'fileTypes': [
+  'requirements.txt'
+]
+'patterns': [
+  {
+    'match': '([1-9]\\d*!)?(0|[1-9]\\d*)(\\.(0|[1-9]\\d*))*((a|b|rc)(0|[1-9]\\d*))?(\\.post(0|[1-9]\\d*))?(\\.dev(0|[1-9]\\d*))?(?=\\s*$)'
+    'name': 'constant.numeric.version.pip'
+  }
+  {
+    'match': '^[A-Za-z0-9\\-_]+'
+    'name': 'meta.package-name.pip'
+  }
+  {
+    'match': '(~=|===|==|!=|<=|>=|<|>)'
+    'name': 'keyword.version-specifier.pip'
+  }
+]
