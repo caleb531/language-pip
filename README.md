@@ -16,6 +16,7 @@ pull request to add snippets, make grammar tweaks, etc.
 - `pip.conf`
 - `setup.cfg`
 - `requirements.txt`
+- `Pipfile`
 
 ## Installation
 

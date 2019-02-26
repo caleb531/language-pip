@@ -1,0 +1,10 @@
+'name': 'Pipfile'
+'scopeName': 'text.pip.pipfile'
+'fileTypes': [
+  'Pipfile'
+]
+'patterns': [
+  {
+    'include': 'source.toml'
+  }
+]
