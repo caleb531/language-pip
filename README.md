@@ -14,6 +14,8 @@ pull request to add snippets, make grammar tweaks, etc.
 
 - `.pypirc`
 - `pip.conf`
+- `setup.cfg`
+- `requirements.txt`
 
 ## Installation
 
