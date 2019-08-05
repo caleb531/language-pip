@@ -4,8 +4,8 @@
   'requirements.txt'
 ]
 'patterns': [
-  {
-    'begin': '^([\\s]+)?(?=#)'
+  { # line comment : (spanning an entire line) | (at end of a regular line)
+    'begin': '(^([\\s]+)?(?=#))|(([\\s]+)(?=#))'
     'beginCaptures':
       '1':
         'name': 'punctuation.whitespace.comment.leading.pip'
