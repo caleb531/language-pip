@@ -1,0 +1,44 @@
+# ================================================================================
+# source: [pip docmentation](https://pip.pypa.io/en/latest/reference/pip_install/#requirements-file-format)
+# ------------
+# Below is an excerpt from the pip documentation
+# relating to the format of 'requirements' files:
+#
+# > A line that begins with # is treated as a comment and ignored.
+# > Whitespace followed by a # causes the # and the remainder of the line to be treated as a comment.
+# ================================================================================
+
+# This is a COMMENT (spanning an entire line)
+  # This another COMMENT (which also spans en entire line), since those MAY be preceded by whitespace
+
+faker   # Another COMMENT (at the end of a regular line), which MUST be preceded by whitespace to count as a comment.
+jinja2 >= 2.10
+pytest
+six == 1.12.0
+
+# NOTE that '#' below  does NOT signal the start of a comment (since it is NOT preceded by whitespace)
+# This is a relief because the '#' character be present in regular strings (as in some URLs)
+[-e] git://git.example.com/MyProject#egg=MyProject
+
+
+# ------------------------------------------------------------------------------------------------
+# Other than the stop measure above (preceding whitespace), pip does not appear to define a generic
+# escaping mechanism for preventing the '#' char (preceded by whitespace) from starting a comment.
+# --
+# In practise, this does not really pose a problem, because it is so rarely needed, if ever.
+# In fact, the only place I can think of where this could eventually occur is in filenames
+# on systems where that is alowed, such as Unix/Linux.
+#
+# So, you are out of luck if you've got to deal with a weird file name
+# that contains whitespace followed by the '#' character.
+#
+# But, don't worry, pip itself cannot deal with it either:-)
+# So the fact that 'language-pip' basically mirrors the pip behaviour
+# is actually a good thing because this gives visual clue about the problem.
+# ------------------------------------------------------------------------------------------------
+# Here's a contrived example:
+-r "some weird file #1.txt"
+
+# If you really to refer to offending strings that can't be parsed by pip (like the above),
+# the following workaround appears to do the trick (as of the current pip version).
+-r "${WEIRDO}"  # where `WEIRDO` is an environment variable that already contains the offending string
